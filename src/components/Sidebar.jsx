@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import fileIcon from "../assets/fileIcon.png";
 
 const Sidebar = ({
   onStartAddProject,
@@ -8,11 +9,13 @@ const Sidebar = ({
   selectedProjectId,
 }) => {
   return (
-    <aside className="w-1/3 px-8 py-16 bg-stone-900 text-stone-50 md:w-72 rounded-tr-xl ">
-      {/* {console.log(projects)} */}
-      <h2 className="mb-8 font-bold uppercase md:text-xl text-stone-200">
-        Your Projects
-      </h2>
+    <aside className="w-1/3 px-8 py-16 bg-stone-900 text-stone-50 md:w-72 ">
+      <div className="flex items-center gap-2 mb-4">
+        <img src={fileIcon} className="w-8 " />
+        <h2 className="font-bold uppercase md:text-xl text-stone-200">
+          Your Projects
+        </h2>
+      </div>
       <div>
         <Button onClick={onStartAddProject}>+ Add Project</Button>
         <ul className="mt-4">
